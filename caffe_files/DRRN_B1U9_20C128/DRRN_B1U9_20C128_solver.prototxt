@@ -1,0 +1,26 @@
+# The train/test net protocol buffer definition
+net: "./DRRN_B1U9_20C128_train.prototxt"
+test_iter: 6536
+# Carry out testing every 100 training iterations.
+test_interval: 6536
+# The base learning rate, momentum and the weight decay of the network.
+base_lr: 0.1
+momentum: 0.9
+weight_decay: 0.0001
+# The learning rate policy
+lr_policy: "step"
+gamma: 0.5
+stepsize: 65360
+# gradient clipping: to tune
+clip_gradients: 0.01
+
+# Display every 100 iterations
+display: 6536
+# The maximum number of iterations
+max_iter: 2000000
+# snapshot intermediate results
+snapshot: 6536
+snapshot_prefix: "../../model/DRRN_B1U9_20C128"
+# solver mode: CPU or GPU
+solver_mode: GPU
+
