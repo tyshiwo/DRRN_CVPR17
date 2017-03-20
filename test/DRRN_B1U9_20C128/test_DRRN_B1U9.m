@@ -18,11 +18,11 @@ iter_interval = 6536;
 startNUM = 71;
 endNUM = 71;
 thresh = 1;
-thresh_hei = 150;
+thresh_hei = 150; % threshold patch size for inference, since too big image may cost too much memory
 thresh_wid = 150;
 rf = 16;
 
-pathfolder = ['/data2/taiying/MSU_Code/CVPR16_VDSR/Test/'];
+pathfolder = ['../../data/'];
 if data_set_id == 1
     % Set5
     setTestCur = 'Set5';

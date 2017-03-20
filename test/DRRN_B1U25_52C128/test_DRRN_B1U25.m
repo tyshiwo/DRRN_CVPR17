@@ -18,7 +18,7 @@ iter_interval = 6536;
 startNUM = 101;
 endNUM = 101;
 thresh = 1;
-thresh_hei = 150;
+thresh_hei = 150; % threshold patch size for inference, since too big image may cost too much memory
 thresh_wid = 150;
 rf = 16;
 
