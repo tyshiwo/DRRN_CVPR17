@@ -60,7 +60,7 @@ if ~exist(folderResultCur,'file')
 end
 
 mean_bicubic = [];
-mean_vdsr = [];
+mean_drrn = [];
 % caffe.set_mode_cpu(); % for CPU
 caffe.set_mode_gpu(); % for GPU
 caffe.set_device(gpu_id);
@@ -71,7 +71,7 @@ for NUM = startNUM:thresh:endNUM
     model_path = './DRRN_B1U25_52C128_deploy';
     
     bicubic_set =[];
-    vdsr_set = [];
+    drrn_set = [];
     im_h_set = cell(filenum,1);
     im_gnd_set = cell(filenum,1);
     im_other_set = cell(6,1);
@@ -220,30 +220,30 @@ for NUM = startNUM:thresh:endNUM
         
         %% compute PSNR and SSIM and IFC
         bic(1) = compute_psnr(im_y_gnd1,im_y_b1);
-        vdsr(1) = compute_psnr(im_y_gnd1,im_y_h1);
+        drrn(1) = compute_psnr(im_y_gnd1,im_y_h1);
         bic(2) = ssim_index(im_y_gnd1,im_y_b1);
-        vdsr(2) = ssim_index(im_y_gnd1,im_y_h1);
+        drrn(2) = ssim_index(im_y_gnd1,im_y_h1);
         bic(3) = ifcvec(double(im_y_gnd1),double(im_y_b1));
-        vdsr(3) = ifcvec(double(im_y_gnd1),double(im_y_h1));
+        drrn(3) = ifcvec(double(im_y_gnd1),double(im_y_h1));
         
         bicubic_set = [bicubic_set; bic];
-        vdsr_set = [vdsr_set; vdsr];
+        drrn_set = [drrn_set; drrn];
     end
     mean_bicubic = [mean_bicubic; [mean(bicubic_set(:,1)) mean(bicubic_set(:,2)) mean(bicubic_set(:,3))]];
-    mean_vdsr = [mean_vdsr; [mean(vdsr_set(:,1)) mean(vdsr_set(:,2)) mean(vdsr_set(:,3))]];
+    mean_drrn = [mean_drrn; [mean(drrn_set(:,1)) mean(drrn_set(:,2)) mean(drrn_set(:,3))]];
 end
 
 %%% save PSNR and SSIM metrics
-PSNR_set = vdsr_set(:,1);
-SSIM_set = vdsr_set(:,2);
-IFC_set = vdsr_set(:,3);
+PSNR_set = drrn_set(:,1);
+SSIM_set = drrn_set(:,2);
+IFC_set = drrn_set(:,3);
 save(fullfile(folderResultCur,['PSNR_',setTestCur,'_x',num2str(up_scale),'.mat']),['PSNR_set'])
 save(fullfile(folderResultCur,['SSIM_',setTestCur,'_x',num2str(up_scale),'.mat']),['SSIM_set'])
 save(fullfile(folderResultCur,['IFC_',setTestCur,'_x',num2str(up_scale),'.mat']),['IFC_set'])
 
 count = 1;
 for kk = startNUM:thresh:endNUM
-    disp(['epoch: ' num2str(kk) '---- bic = ' num2str(mean_bicubic(count,:)) '---- DRRN = ' num2str(mean_vdsr(count,:))]);
+    disp(['epoch: ' num2str(kk) '---- bic = ' num2str(mean_bicubic(count,:)) '---- DRRN = ' num2str(mean_drrn(count,:))]);
     count = count+1;
 end
 
