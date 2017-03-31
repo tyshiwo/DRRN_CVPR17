@@ -66,11 +66,11 @@ const Dtype clip_gradients = this->param_.clip_gradients()/rate;
   </tr>  
 </table>
 
-## scale factor x2
+## Scale factor x2
 ![](figures/x2_supp.jpg) 
 
-## scale factor x3
+## Scale factor x3
 ![](figures/x3_supp.jpg) 
 
-## scale factor x4
+## Scale factor x4
 ![](figures/x4_supp.jpg) 
