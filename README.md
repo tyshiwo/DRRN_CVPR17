@@ -18,7 +18,7 @@ const Dtype clip_gradients = this->param_.clip_gradients()/rate;
 
 
 ## Benchmark results
-![](figures/Benchmark results.PNG) 
+![](figures/Benchmark_results.PNG) 
 
 ## Scale factor x2
 ![](figures/x2_supp.jpg) 
