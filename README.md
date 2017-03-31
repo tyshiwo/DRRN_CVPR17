@@ -22,7 +22,7 @@ const Dtype clip_gradients = this->param_.clip_gradients()/rate;
 ![](figures/Benchmark_results.PNG) 
 
 ### IFCs
-![](figures/IFC.PNG) 
+![](figures/IFCs.PNG) 
 
 ## Qualitative results
 ### Scale factor x2
