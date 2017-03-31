@@ -40,7 +40,7 @@ const Dtype clip_gradients = this->param_.clip_gradients()/rate;
     <td> 37.53/0.9587 </td>
     <td> 37.63/0.9588 </td>
     <td> 37.66/0.9589 </td>
-    <td> 37.74/0.9591 </td>
+    <td><strong> 37.74/0.9591 </strong></td>
   </tr>
   <tr>
     <td> x3 </td>
