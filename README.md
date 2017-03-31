@@ -16,6 +16,8 @@ const Dtype clip_gradients = this->param_.clip_gradients()/rate;
 1. Remember to compile the matlab wrapper: make matcaffe, since we use matlab to do testing.
 2. We release two pretrained models: DRRN_B1U9_20C128 and DRRN_B1U25_52C128 in "model" folder. Choose either one to do testing on benchmark Set5. E.g., run file ./test/DRRN_B1U9_20C128/test_DRRN_B1U9, the results are stored in "results" folder, with both reconstructed images and PSNR/SSIM/IFCs.
 
+<font color="#FF0000"> 这里输入文字，自定义颜色的字体 </font> 
+
 <table align="center">
   <tr>
     <td> Dataset </td>
