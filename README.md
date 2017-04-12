@@ -1,5 +1,6 @@
-# DRRN_CVPR17
-Code for our CVPR'17 paper "Image Super-Resolution via Deep Recursive Residual Network"
+
+# DRRN
+[Paper](http://cvlab.cse.msu.edu/pdfs/Tai_Yang_Liu_CVPR2017.pdf)
 
 # Implement adjustable gradient clipping 
 modify sgd_solver.cpp in your_caffe_root/src/caffe/solvers/, where we add the following codes in funciton ClipGradients():
