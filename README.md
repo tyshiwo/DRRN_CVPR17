@@ -18,8 +18,11 @@ const Dtype clip_gradients = this->param_.clip_gradients()/rate;
 2. We release two pretrained models: DRRN_B1U9_20C128 and DRRN_B1U25_52C128 in "model" folder. Choose either one to do testing on benchmark Set5. E.g., run file ./test/DRRN_B1U9_20C128/test_DRRN_B1U9, the results are stored in "results" folder, with both reconstructed images and PSNR/SSIM/IFCs.
 
 # Demo
-<iframe height=498 width=510 src="http://player.youku.com/embed/XMzc4MjczMg==" frameborder=0 allowfullscreen></iframe>
-
+<video id="video" controls="" preload="none" >
+      <source id="mp4" src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
+      <p>Your user agent does not support the HTML5 Video element.</p>
+    </video>
+    
 # Benchmark results
 ## Quantitative results
 ### PSNR/SSIMs
