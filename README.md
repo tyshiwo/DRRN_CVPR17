@@ -1,5 +1,6 @@
-# DRRN_CVPR17
-Code for our CVPR'17 paper "Image Super-Resolution via Deep Recursive Residual Network"
+
+# DRRN
+### [[Paper]](http://cvlab.cse.msu.edu/pdfs/Tai_Yang_Liu_CVPR2017.pdf)[[Project]](http://cvlab.cse.msu.edu/project-super-resolution.html)
 
 # Implement adjustable gradient clipping 
 modify sgd_solver.cpp in your_caffe_root/src/caffe/solvers/, where we add the following codes in funciton ClipGradients():
@@ -15,7 +16,7 @@ const Dtype clip_gradients = this->param_.clip_gradients()/rate;
 # Test
 1. Remember to compile the matlab wrapper: make matcaffe, since we use matlab to do testing.
 2. We release two pretrained models: DRRN_B1U9_20C128 and DRRN_B1U25_52C128 in "model" folder. Choose either one to do testing on benchmark Set5. E.g., run file ./test/DRRN_B1U9_20C128/test_DRRN_B1U9, the results are stored in "results" folder, with both reconstructed images and PSNR/SSIM/IFCs.
-
+    
 # Benchmark results
 ## Quantitative results
 ### PSNR/SSIMs
