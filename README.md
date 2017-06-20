@@ -2,6 +2,16 @@
 # DRRN
 ### [[Paper]](http://cvlab.cse.msu.edu/pdfs/Tai_Yang_Liu_CVPR2017.pdf)[[Project]](http://cvlab.cse.msu.edu/project-super-resolution.html)
 
+### Citation
+If you find DRRN useful in your research, please consider citing:
+
+	@inproceedings{Tai-DRRN-2017,
+	  title={Image Super-Resolution via Deep Recursive Residual Network},
+	  author={Tai, Ying and Yang, Jian and Liu, Xiaoming },
+	  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+	  year={2017}
+	}
+
 # Implement adjustable gradient clipping 
 modify sgd_solver.cpp in your_caffe_root/src/caffe/solvers/, where we add the following codes in funciton ClipGradients():
 
