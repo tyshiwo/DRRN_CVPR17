@@ -12,6 +12,9 @@ If you find DRRN useful in your research, please consider citing:
 	  year={2017}
 	}
 
+# Other implementation
+[[DRRN-pytorch]](https://github.com/jt827859032/DRRN-pytorch) by yun_yang
+
 # Implement adjustable gradient clipping 
 modify sgd_solver.cpp in your_caffe_root/src/caffe/solvers/, where we add the following codes in funciton ClipGradients():
 
